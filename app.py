@@ -2,14 +2,18 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask, make_response,redirect,render_template
+
 import  json
+import Interface.table
+
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    cc = Interface.table.A
+    cc.myCjj(200)
+    return "hrrl"
 
 @app.route('/hello')
 def hello():
